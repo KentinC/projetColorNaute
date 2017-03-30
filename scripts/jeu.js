@@ -28,7 +28,7 @@ let tsBlocks = new Array();
 // var
 let dirBlock = 15;
 let speedBlock = 200;
-let speedGen = 2000;
+let speedGen = 1750;
 
 // var 
 let block;
