@@ -28,7 +28,7 @@ let tsBlocks = new Array();
 // var
 let dirBlock = 15;
 let speedBlock = 200;
-let speedGen = 2250;
+let speedGen = 2000;
 
 // var 
 let block;
@@ -53,32 +53,6 @@ function startGame() {
     },
     false
   );
-}
-
-function speedLevel (){
-    if (points <= 50) {
-    speedBlock = 100;
-    speedGen = 2250;
-    return speedBlock;
-    return speedGen;
-  } else if (points <= 150) {
-    speedBlock = 100;
-    speedGen = 2250;
-    return speedBlock;
-    return speedGen;
-    return width;
-  } else if ( points <= 250) {
-    speedBlock = 100;
-    speedGen = 2250;
-    return speedBlock;
-    return speedGen;
-  } else {
-    
-    speedBlock = 100;
-    speedGen = 2250;
-    return speedBlock;
-    return speedGen;
-  }
 }
 
 function init() {
