@@ -1,11 +1,11 @@
-var moon = document.getElementById('moon'),
-  earth = document.getElementById('earth'),
-  chrome = document.getElementById('chrome'),
-  facebook = document.getElementById('facebook'),
-  twitter = document.getElementById('twitter'),
-  btnStartGame = document.getElementById('btn-start-game'),
-  startPageContent = document.getElementById('start-page-content'),
-  sponsor = document.getElementById('sponsor');
+let moon = document.getElementById('moon');
+let earth = document.getElementById('earth');
+let chrome = document.getElementById('chrome');
+let facebook = document.getElementById('facebook');
+let twitter = document.getElementById('twitter');
+let btnStartGame = document.getElementById('btn-start-game');
+let startPageContent = document.getElementById('start-page-content');
+let sponsor = document.getElementById('sponsor');
 
 
 btnStartGame.onclick = function () {
