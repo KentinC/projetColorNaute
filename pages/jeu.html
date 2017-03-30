@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/styleJeu.css" />
+</head>
+<header>
+
+</header>
+
+<body>
+  <div id="gameZone">
+    <img src="../images/pressSpace1.png" alt="press Space Bar" id="startImg" />
+    <audio id="audioPlayer" src="../sons/spaceGone.mp3" loop="-1"></audio>
+    <audio id="audioPlayerWin" src="../sons/circleLaser.mp3"></audio>
+    <audio id="audioPlayerLoose" src="../sons/noChance.mp3"></audio>
+    <div>
+      <span class="counter" id="levelCounter"></span>
+      <span class="counter" id="pointsCounter"></span>
+      <span class="counter" id="lifeCounter"></span>
+    </div>
+    <div id="spaceGame"></div>
+    <div id="touch"><img src="../images/touch.png" alt="touch"></div>
+    <div id="square">
+      <img src="../images/astro.png" id="hero" />
+    </div>
+  </div>
+
+  <script src="../scripts/jeu.js"></script>
+  <script src="../scripts/Rectangle.js"></script>
+</body>
+</html>
