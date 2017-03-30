@@ -1,0 +1,94 @@
+body {
+  background-image: url(../images/background-spaceHalo.png);
+  background-size: cover;
+}
+
+#gameZone {
+  border: solid #999999;
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 25%;
+  border: solid;
+  overflow: hidden;
+  background-image: url(../images/backgroundSpace.png);
+  background-size: 600px, 500px;
+  background-position: center;
+  z-index: 1;
+}
+
+#touch >img {
+  position: absolute;
+  width: 600px;
+  top: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#spaceGame {
+  position: relative;
+}
+
+#levelCounter {
+  margin-right: 40px;
+  margin-left: 40px;
+  color: dodgerblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#lifeCounter {
+  margin-left: 100px;
+  color: dodgerblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+#pointsCounter {
+  margin-right: 40px;
+  margin-left: 135px;
+  width: 600px;
+  color: dodgerblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.counter > span {
+  position: absolute;
+  display: inline-block;
+}
+
+#startImg {
+  position: absolute;
+  display: block;
+  width: 600px;
+  height: 500px;
+  z-index: 100;
+  transition: 0.2s linear;
+}
+
+#gameOverImg {
+  display: none;
+}
+
+#square {
+  width: 30px;
+  background: grey;
+  height: 30px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  left: 0;
+  border: black solid 3px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+#hero {
+  width: 30px;
+  height: 30px;
+}
