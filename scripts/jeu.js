@@ -1,8 +1,8 @@
 
 //var sound
-let player = document.querySelector('#audioPlayer');
-let playerWin = document.querySelector('#audioPlayerWin');
-let playerLoose = document.querySelector('#audioPlayerLoose');
+let player = document.querySelector('#audioPlayer'),
+    playerWin = document.querySelector('#audioPlayerWin'),
+    playerLoose = document.querySelector('#audioPlayerLoose');
 //var character
 let hero = document.querySelector("#square"),
     heroX = 90,
@@ -22,23 +22,23 @@ let spaceGame = document.querySelector("#spaceGame"),
     startImg = document.querySelector("#startImg");
 
 // tables's position
-let positionTop = new Array();
-let positionLeft = new Array();
-let positionRight = new Array();
-let tsBlocks = new Array();
+let positionTop = new Array(),
+    positionLeft = new Array(),
+    positionRight = new Array(),
+    tsBlocks = new Array();
 
 // var help move blocks 
-let dirBlock = 15;
-let speedBlock = 200;
-let speedGen = 1200;
+let dirBlock = 15,
+    speedBlock = 200,
+    speedGen = 1450;
 
 // var blocks functions
-let block;
-let width = 0;
-let mLeft = 0;
-let color = 0;
-let j = 0;
-let k = 0;
+let block,
+    width = 0,
+    mLeft = 0,
+    color = 0,
+    j = 0,
+    k = 0;
 
 // function's call
 startGame()
@@ -110,7 +110,7 @@ function checkPosition() {
     positionLeft.shift();
     positionRight.shift();
     tsBlocks.shift();
-
+ //Remove the blocks
     let x = document.querySelector("#astro" + k);
     x.remove(x);
 
@@ -121,6 +121,7 @@ function checkPosition() {
     checkCollision(0);
   }
 }
+
 // counters's function
 function updateCounter() {
   levelCounter.innerHTML = ("Level " + level);
@@ -134,6 +135,7 @@ window.addEventListener(
   "keypress",
   function (e) {
     switch (e.keyCode) {
+            
     case 113:
       heroX = heroX - 30;
       break;
@@ -175,13 +177,13 @@ window.addEventListener(
 // collision check
 function checkCollision(i) {
   hero.getBoundingClientRect().top;
-  console.log(tsBlocks[i].getBoundingClientRect().top);
-  let heroLeft = hero.getBoundingClientRect().left;
-  let heroRight = hero.getBoundingClientRect().right;
-  let heroBottom = hero.getBoundingClientRect().bottom;
-  let tsBlocksLeft = tsBlocks[i].getBoundingClientRect().left;
-  let tsBlocksRight = tsBlocks[i].getBoundingClientRect().right;
-  let tsBlocksTop = tsBlocks[i].getBoundingClientRect().top;
+  //console.log(tsBlocks[i].getBoundingClientRect().top);
+  let heroLeft = hero.getBoundingClientRect().left,
+      heroRight = hero.getBoundingClientRect().right,
+      heroBottom = hero.getBoundingClientRect().bottom,
+      tsBlocksLeft = tsBlocks[i].getBoundingClientRect().left,
+      tsBlocksRight = tsBlocks[i].getBoundingClientRect().right,
+      tsBlocksTop = tsBlocks[i].getBoundingClientRect().top;
   if (heroLeft >= tsBlocksLeft && heroRight <= (tsBlocksRight + 2) && 200>= tsBlocksTop && tsBlocksTop >= 180) {
     if (tsBlocks[i].style.borderColor == hero.style.background) {
       points += 10;
