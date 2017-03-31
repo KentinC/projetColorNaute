@@ -27,7 +27,7 @@ let positionTop = new Array(),
     positionRight = new Array(),
     tsBlocks = new Array();
 
-// var help move blocks 
+// var help move blocks - change this to change visual ring value 
 let dirBlock = 15,
     speedBlock = 200,
     speedGen = 1750;
@@ -40,7 +40,7 @@ let block,
     j = 0,
     k = 0;
 
-// function's call
+// function call
 startGame()
 
 function startGame() {
@@ -56,7 +56,7 @@ function startGame() {
     false
   );
 }
-
+// HOME FUNCTION
 function init() {
 
   hero.style.left = heroX + "px";
@@ -80,7 +80,7 @@ function init() {
   );
 }
 
-// generating function
+// Generating function
 function genBlock() {
 
   block = new Rectangle("astro" + j);
@@ -95,7 +95,7 @@ function genBlock() {
   j++;
 
 }
-//moving function
+//Moving function
 function moveBlock() {
   for (let i = 0; i < positionTop.length; i++) {
     positionTop[i] = positionTop[i] - dirBlock;
@@ -103,7 +103,7 @@ function moveBlock() {
     tsBlocks[i].style.marginTop = (50 + "px");
   }
 }
-//checking positions generated block
+//Checking positions generated block
 function checkPosition() {
   if (positionTop[0] < -50) {
     positionTop.shift();
@@ -122,7 +122,7 @@ function checkPosition() {
   }
 }
 
-// counters's function
+// Counters function
 function updateCounter() {
   levelCounter.innerHTML = ("Level " + level);
   pointsCounter.innerHTML = ("Points : " + points);
@@ -130,7 +130,7 @@ function updateCounter() {
 }
 
 
-// touch gestion
+// Touch gestion
 window.addEventListener(
   "keypress",
   function (e) {
@@ -174,7 +174,7 @@ window.addEventListener(
   },
   false
 );
-// collision check
+// Collision check
 function checkCollision(i) {
   hero.getBoundingClientRect().top;
   //console.log(tsBlocks[i].getBoundingClientRect().top);
@@ -197,7 +197,7 @@ function checkCollision(i) {
     playerLoose.play();
   }
 }
-// reload when loose
+// Reload when loose
 function gameOver() {
   if (life === -1) {
     document.location.reload(true);
