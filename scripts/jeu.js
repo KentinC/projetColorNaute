@@ -3,36 +3,36 @@
 let player = document.querySelector('#audioPlayer'),
     playerWin = document.querySelector('#audioPlayerWin'),
     playerLoose = document.querySelector('#audioPlayerLoose');
-//var character
+//Var character
 let hero = document.querySelector("#square"),
     heroX = 90,
     heroY = 60,
     speedSquare = 10;
 
-//var counter
+//Var counters
 let level = 1,
     points = 0,
     life = 5;
 
-//var functions
+// Variables joining HTML and JAVASCRIPT
 let spaceGame = document.querySelector("#spaceGame"),
     levelCounter = document.querySelector("#levelCounter"),
     pointsCounter = document.querySelector("#pointsCounter"),
     lifeCounter = document.querySelector("#lifeCounter"),
     startImg = document.querySelector("#startImg");
 
-// tables's position
+// Tables's position
 let positionTop = new Array(),
     positionLeft = new Array(),
     positionRight = new Array(),
     tsBlocks = new Array();
 
-// var help move blocks - change this to change visual ring value 
+// Var help move blocks - change this to change visual ring value 
 let dirBlock = 15,
     speedBlock = 200,
     speedGen = 1750;
 
-// var blocks functions
+// Var blocks functions
 let block,
     width = 0,
     mLeft = 0,
@@ -40,7 +40,7 @@ let block,
     j = 0,
     k = 0;
 
-// function call
+// Call function 
 startGame()
 
 function startGame() {
