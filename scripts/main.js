@@ -1,33 +1,33 @@
-let moon = document.getElementById('moon');
-let earth = document.getElementById('earth');
-let chrome = document.getElementById('chrome');
-let facebook = document.getElementById('facebook');
-let twitter = document.getElementById('twitter');
-let btnStartGame = document.getElementById('btn-start-game');
-let startPageContent = document.getElementById('start-page-content');
-let sponsor = document.getElementById('sponsor');
+let moon = document.getElementById('moon'),
+    earth = document.getElementById('earth'),
+    chrome = document.getElementById('chrome'),
+    facebook = document.getElementById('facebook'),
+    twitter = document.getElementById('twitter'),
+    btnStartGame = document.getElementById('btn-start-game'),
+    startPageContent = document.getElementById('start-page-content'),
+    sponsor = document.getElementById('sponsor');
 
 
 btnStartGame.onclick = function () {
-  // ajouter la classe a la lune pour la faire bouger
+  // Add moon class to make it move
   moon.classList.add('has-moved');
 
-  // ajouter la classe a la terre pour la faire bouger
+  // Add earth class to make it move
   earth.classList.add('has-moved');
 
-  // ajouter la classe au logo chrome pour le faire bouger
+  // Add chrome class to make logo move
   chrome.classList.add('has-moved');
 
-  // ajouter la classe au texte de sponsor pour le faire bouger
+  // Add Sponsor text class to make it move
   sponsor.classList.add('has-moved');
 
-  // ajouter la classe au logo facebook pour le faire bouger
+  // Add Facebook class to make logo move
   facebook.classList.add('has-moved');
 
-  // ajouter la classe au logo twitter pour le faire bouger
+  // Add twitter class to make logo move
   twitter.classList.add('has-moved');
 
-  // cacher le bloc principal avec les explication, bouton, logo
+  // Hide elements
   startPageContent.classList.add('opacity0');
 
   setTimeout(function () {
@@ -36,5 +36,3 @@ btnStartGame.onclick = function () {
 
 
 };
-
-// le reste de ton code du jeu
