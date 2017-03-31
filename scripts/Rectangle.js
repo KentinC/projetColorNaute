@@ -1,8 +1,7 @@
-// creation rectangles
+// creation rectangles with their CSS attribute
 function Rectangle(id) {
   this.id = id;
   this.obj = document.createElement("div");
-
   this.obj.setAttribute("class", "asteroid");
   this.obj.setAttribute("id", this.id);
   this.obj.setAttribute("style", "width:" + widthRect() + "px;height:25px;border-color:" + colorBase() + ";border-size:5px;border-style:solid;display:inline-block;margin-left:" + marginLeft() + "px;position:absolute;border-radius: 50%;top:500px;transition: 1s, linear;");
@@ -35,7 +34,7 @@ function colorBase() {
   return color;
 }
 
-// determination of their width
+// determination of their width including first part of levels
 
 function widthRect() {
   if (points <= 50) {
