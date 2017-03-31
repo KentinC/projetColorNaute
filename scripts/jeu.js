@@ -161,7 +161,7 @@ window.addEventListener(
       break;
         
     default:
-      console.log("Erreur touche");
+      console.log("Wrong touch");
       break;
     }
     
