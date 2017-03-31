@@ -30,7 +30,7 @@ let positionTop = new Array(),
 // var help move blocks 
 let dirBlock = 15,
     speedBlock = 200,
-    speedGen = 1450;
+    speedGen = 1750;
 
 // var blocks functions
 let block,
