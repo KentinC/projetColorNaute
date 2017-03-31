@@ -1,23 +1,25 @@
-var player = document.querySelector('#audioPlayer');
-var playerWin = document.querySelector('#audioPlayerWin');
-var playerLoose = document.querySelector('#audioPlayerLoose');
+
+//var sound
+let player = document.querySelector('#audioPlayer');
+let playerWin = document.querySelector('#audioPlayerWin');
+let playerLoose = document.querySelector('#audioPlayerLoose');
 //var character
-let hero = document.querySelector("#square");
-let heroX = 90;
-let heroY = 60;
-let speedSquare = 10;
+let hero = document.querySelector("#square"),
+    heroX = 90,
+    heroY = 60,
+    speedSquare = 10;
 
 //var counter
-let level = 1;
-let points = 0;
-let life = 5;
+let level = 1,
+    points = 0,
+    life = 5;
 
-//var 
-let spaceGame = document.querySelector("#spaceGame");
-let levelCounter = document.querySelector("#levelCounter");
-let pointsCounter = document.querySelector("#pointsCounter");
-let lifeCounter = document.querySelector("#lifeCounter");
-let startImg = document.querySelector("#startImg")
+//var functions
+let spaceGame = document.querySelector("#spaceGame"),
+    levelCounter = document.querySelector("#levelCounter"),
+    pointsCounter = document.querySelector("#pointsCounter"),
+    lifeCounter = document.querySelector("#lifeCounter"),
+    startImg = document.querySelector("#startImg");
 
 // tables's position
 let positionTop = new Array();
@@ -25,12 +27,12 @@ let positionLeft = new Array();
 let positionRight = new Array();
 let tsBlocks = new Array();
 
-// var
+// var help move blocks 
 let dirBlock = 15;
 let speedBlock = 200;
-let speedGen = 1750;
+let speedGen = 1200;
 
-// var 
+// var blocks functions
 let block;
 let width = 0;
 let mLeft = 0;
@@ -115,7 +117,7 @@ function checkPosition() {
     k++;
   }
   if (positionTop[0] === -40) {
-    console.log(positionTop[0], " block ");
+    //console.log(positionTop[0], " block ");
     checkCollision(0);
   }
 }
@@ -155,12 +157,12 @@ window.addEventListener(
     case 109:
       hero.style.background = '#3498db';
       break;
+        
     default:
       console.log("Erreur touche");
       break;
-
-
     }
+    
     hero.style.left = heroX + "px";
     if (heroX > 600) {
       heroX = 600;
@@ -193,9 +195,9 @@ function checkCollision(i) {
     playerLoose.play();
   }
 }
-
+// reload when loose
 function gameOver() {
-  if (life === 0) {
+  if (life === -1) {
     document.location.reload(true);
   }
 }
